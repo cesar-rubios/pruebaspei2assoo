@@ -3,6 +3,7 @@
 from flask import jsonify
 import flask
 import socket
+import os
 from basedatos import contador_visitas 
 from catalog import get_products, create_product 
 
@@ -58,4 +59,4 @@ def catalog():
 
 if __name__ == '__main__':
     APP.debug = True
-    app.run(port=int(os.environ.get("PORT", 8080)),host='0.0.0.0',debug=True) 
+    APP.run(port=int(os.environ.get("PORT", 8080)),host='0.0.0.0',debug=True) 
