@@ -13,7 +13,7 @@ services:
     build:
       context: webapp
     image: webapp:latest
-    ports:
+    expose:
       - "8080"
     environment:
       - REDIS_LOCATION=redisserver
