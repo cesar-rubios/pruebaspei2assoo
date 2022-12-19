@@ -19,7 +19,7 @@ COPY ./app /app
 
 #puerto de escucha del contendor
 #dentro del código de python haremos su función
-EXPOSE 5000
+EXPOSE 80
 
 #ejecutamos el programa principal
 CMD python main.py
