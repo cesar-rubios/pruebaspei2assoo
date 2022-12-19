@@ -1,3 +1,56 @@
+cesar@op:~/pei2/07apipropio$ ls
+api  docker-compose.yml
+cesar@op:~/pei2/07apipropio$ vim docker-compose.yml 
+cesar@op:~/pei2/07apipropio$ cd app
+-bash: cd: app: No such file or directory
+cesar@op:~/pei2/07apipropio$ cd api/app
+cesar@op:~/pei2/07apipropio/api/app$ vim main.py 
+cesar@op:~/pei2/07apipropio/api/app$ rm main.py 
+cesar@op:~/pei2/07apipropio/api/app$ vim ma
+cesar@op:~/pei2/07apipropio/api/app$ vim main.py 
+cesar@op:~/pei2/07apipropio/api/app$ vim main.py 
+cesar@op:~/pei2/07apipropio/api/app$ vim main.py 
+cesar@op:~/pei2/07apipropio/api/app$ cd
+cesar@op:~$ cd pei2/
+cesar@op:~/pei2$ cd 07apipropio/
+cesar@op:~/pei2/07apipropio$ ls
+api  docker-compose.yml
+cesar@op:~/pei2/07apipropio$ vim docker-compose.yml 
+cesar@op:~/pei2/07apipropio$ sudo service apache2 stop
+cesar@op:~/pei2/07apipropio$ cd ..
+cesar@op:~/pei2$ cd 07
+-bash: cd: 07: No such file or directory
+cesar@op:~/pei2$ cd 07apipropio/
+cesar@op:~/pei2/07apipropio$ vim docker-compose.yml 
+cesar@op:~/pei2/07apipropio$ vim docker-compose.yml 
+cesar@op:~/pei2/07apipropio$ cd api
+cesar@op:~/pei2/07apipropio/api$ cd app
+cesar@op:~/pei2/07apipropio/api/app$ ls
+__pycache__  basedatos.py  catalog.py  main.py  static  templates
+cesar@op:~/pei2/07apipropio/api/app$ vim main.py 
+cesar@op:~/pei2/07apipropio/api/app$ cd ..
+cesar@op:~/pei2/07apipropio/api$ cd ..
+cesar@op:~/pei2/07apipropio$ ls
+api  docker-compose.yml
+cesar@op:~/pei2/07apipropio$ vim docker-compose.yml 
+cesar@op:~/pei2/07apipropio$ vim /api/app/ma
+cesar@op:~/pei2/07apipropio$ vim /api/app/main.py
+cesar@op:~/pei2/07apipropio$ cd api
+cesar@op:~/pei2/07apipropio/api$ cd app
+cesar@op:~/pei2/07apipropio/api/app$ vim main.py 
+cesar@op:~/pei2/07apipropio/api/app$ nano main.py 
+cesar@op:~/pei2/07apipropio/api/app$ 
+cesar@op:~/pei2/07apipropio/api/app$ nano main.py 
+
+
+
+
+
+
+
+
+
+  GNU nano 5.4                                        main.py                                                  
 #!/usr/bin/env python
  
 from flask import jsonify
@@ -8,6 +61,7 @@ from basedatos import contador_visitas
 from catalog import get_products, create_product 
 
 APP = flask.Flask(__name__)
+PORT=os.environ["PORT"]
 
 userinfo = {
     'nombre': 'César',
@@ -58,6 +112,5 @@ def catalog():
 
 
 if __name__ == '__main__':
-    PORT = os.environ['PORT']
     APP.debug = True
     APP.run(host='0.0.0.0', port=PORT)
